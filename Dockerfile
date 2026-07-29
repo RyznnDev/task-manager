@@ -13,7 +13,8 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 WORKDIR /var/www/html
 COPY . .
 
-# Buat file .env secara manual dengan konfigurasi PostgreSQL Neon.tech
+
+# Buat file .env secara manual dengan konfigurasi PostgreSQL Neon.tech yang benar
 RUN echo "APP_NAME=Laravel" > .env \
     && echo "APP_ENV=production" >> .env \
     && echo "APP_KEY=" >> .env \
@@ -24,7 +25,9 @@ RUN echo "APP_NAME=Laravel" > .env \
     && echo "DB_PORT=5432" >> .env \
     && echo "DB_DATABASE=neondb" >> .env \
     && echo "DB_USERNAME=neondb_owner" >> .env \
-    && echo "DB_PASSWORD=npg_d8qB8OkmcSLZ" >> .env
+    && echo "DB_PASSWORD=npg_3FGzTpbmACK1" >> .env \
+    && echo "DB_SSLMODE=require" >> .env
+
 
 RUN composer install --no-dev --optimize-autoloader
 
