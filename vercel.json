@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "framework": "laravel",
-  "functions": {
-    "api/index.php": {
-      "maxDuration": 60
+  "builds": [
+    {
+      "src": "api/index.php",
+      "use": "@vercel/php"
     }
-  },
+  ],
   "routes": [
     {
       "src": "/(.*)",
