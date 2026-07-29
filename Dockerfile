@@ -21,7 +21,8 @@ RUN echo "APP_NAME=Laravel" > .env \
     && echo "APP_DEBUG=true" >> .env \
     && echo "APP_URL=https://task-manager-smpl.vercel.app" >> .env \
     && echo "DB_CONNECTION=pgsql" >> .env \
-    && echo "DB_HOST=ep-withered-rain-a1w0t4y9-pooler.ap-southeast-1.aws.neon.tech" >> .env \
+    && echo "DB_HOST=ep-round-water-azy0a6av-pooler.c-3.ap-southeast-1.aws.neon.tech" >> .env \
+
     && echo "DB_PORT=5432" >> .env \
     && echo "DB_DATABASE=neondb" >> .env \
     && echo "DB_USERNAME=neondb_owner" >> .env \
