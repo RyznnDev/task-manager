@@ -1,16 +1,3 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "installCommand": "",
-    "buildCommand": "",
-    "outputDirectory": ""
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/api/index.php"
-    }
-  ]
+  "framework": null
 }
