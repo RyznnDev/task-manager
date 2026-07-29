@@ -40,7 +40,6 @@ RUN composer install --no-dev --optimize-autoloader
 RUN php artisan key:generate --force
 
 # Generate APP_KEY dan jalankan migrasi database
-RUN php artisan migrate --force
 
 
 # Konfigurasi Apache DocumentRoot ke folder public
