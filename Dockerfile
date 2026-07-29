@@ -49,3 +49,8 @@ RUN a2enmod rewrite
 # Berikan izin akses folder storage dan cache
 RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache \
     && chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache
+
+# Berikan izin akses untuk folder public (agar FontAwesome & aset terbaca)
+RUN chown -R www-data:www-data /var/www/html/public && \
+    chmod -R 755 /var/www/html/public
+
