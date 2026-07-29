@@ -35,6 +35,10 @@ RUN composer install --no-dev --optimize-autoloader
 # Generate APP_KEY
 RUN php artisan key:generate --force
 
+#  jalankan migrasi database
+RUN php artisan migrate --force
+
+
 # Konfigurasi Apache DocumentRoot ke folder public
 RUN sed -i 's!/var/www/html!/var/www/html/public!g' /etc/apache2/sites-available/000-default.conf
 RUN a2enmod rewrite
