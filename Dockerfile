@@ -17,6 +17,9 @@ RUN cp .env.example .env
 
 RUN composer install --no-dev --optimize-autoloader
 
+# Generate APP_KEY secara otomatis agar tidak error enkripsi
+RUN php artisan key:generate --force
+
 # Konfigurasi Apache DocumentRoot ke folder public
 RUN sed -i 's!/var/www/html!/var/www/html/public!g' /etc/apache2/sites-available/000-default.conf
 RUN a2enmod rewrite
