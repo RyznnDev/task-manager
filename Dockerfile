@@ -28,6 +28,8 @@ RUN echo "APP_NAME=Laravel" > .env \
     && echo "DB_USERNAME=neondb_owner" >> .env \
     && echo "DB_PASSWORD=npg_3FGzTpbmACK1" >> .env \
     && echo "DB_SSLMODE=require" >> .env
+    && echo "SESSION_DRIVER=cookie" >> .env \
+
 
 
 RUN composer install --no-dev --optimize-autoloader
@@ -35,7 +37,7 @@ RUN composer install --no-dev --optimize-autoloader
 # Generate APP_KEY
 RUN php artisan key:generate --force
 
-#  jalankan migrasi database
+# Generate APP_KEY dan jalankan migrasi database
 RUN php artisan migrate --force
 
 
