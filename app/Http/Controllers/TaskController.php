@@ -51,7 +51,7 @@ class TaskController extends Controller
     }
     //-mengubah status
     public function toggleComplete(Task $task) {
-      $task->update(['is_completed' => !$task->is_complete]);
+      $task->update(['completed' => !$task->completed]);
       return redirect()->route('tasks.index');
     }
 }
